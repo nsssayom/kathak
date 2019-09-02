@@ -5,14 +5,15 @@ from .models import *
 from .globals import *
 from .graph import *
 
+CART_ITEM = Item()
 
-page = Page(ACCESS_TOKEN) #messenger entity
+page = Page(ACCESS_TOKEN)
 page.greeting("{{user_first_name}}, Welcome to Circuit House!")
 
-# St #the first messagearting button action
+# Starting button action
 page.show_starting_button("START_PAYLOAD")
 
-# St #callback arguarting Button Callback Handler
+# Starting Button Callback Handler
 @page.callback(['START_PAYLOAD'])
 def start_callback(payload, event):
     print("GET STARTED TRIGGERED!")
@@ -153,12 +154,6 @@ def click_item(payload, event):
     time.sleep(.7)
     page.typing_off(event.sender_id)
     
-@app.route('/', methods=['POST'])
-def webhook():
-    page.handle_webhook(request.get_data(
-        as_text=True), message=message_handler)
-    return "ok"
-
 
     quick_replies = [
         QuickReply(title='1', payload='CART_QUANTITY|' + item_id + '|1'),
