@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: fbmq
+Version: 2.5.0
+Summary: A Python Library For Using The Facebook Messenger Platform API
+Home-page: https://github.com/conbus/fbmq
+Author: kimwz
+Author-email: kimwz.kr@gmail.com
+License: MIT
+Keywords: Facebook Messenger Platform Chatbot
+Platform: UNKNOWN
+Requires-Dist: requests (>=2.0)
+Requires-Dist: flask
+Provides-Extra: test
+Requires-Dist: responses ; extra == 'test'
+Requires-Dist: mock ; extra == 'test'
+
+UNKNOWN
+
+
