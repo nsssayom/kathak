@@ -274,3 +274,6 @@ def template_cart_items(user_id):
     if not elements: isNull = True
 
     return [Template.Generic(elements, True), isNull] 
+
+if __name__ == "__main__":
+    app.run(host='0.0.0.0')
